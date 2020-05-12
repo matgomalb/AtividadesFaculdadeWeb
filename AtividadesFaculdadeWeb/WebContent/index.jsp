@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,7 +13,8 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <!-- Barra superior com os menus de navegação -->
+  	<c:import url="Menu.jsp"/>
+    <!-- Barra superior com os menus de navegaÃ§Ã£o -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -40,7 +43,7 @@
             <div class="row">
                 <div class="form-group col-md-12">
                     <label for="nome">País</label>
-                    <input type="text" class="form-control" name="pais" id="pais" required maxlength="100" placeholder="nome país">
+                    <input type="text" class="form-control" name="pais" id="pais" required maxlength="100" placeholder="nome pais">
                 </div>
             </div>
             <div class="row">

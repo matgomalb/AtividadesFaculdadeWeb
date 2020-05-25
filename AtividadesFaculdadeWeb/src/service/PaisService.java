@@ -1,25 +1,41 @@
 package service;
 
-import dao.PaisDAO;
 import model.Pais;
 
-public class PaisService {
+import java.util.ArrayList;
 
-	PaisDAO dao = new PaisDAO();
+import dao.PaisDAO;
+
+
+public class PaisService {
+	PaisDAO dao;
 	
-	public int criar(Pais pais) {
-		return dao.insert(pais);
+	public PaisService() {
+		dao = new PaisDAO();
+	}
+	
+	public int criar(Pais Pais) {
+		return dao.insert(Pais);
 	}
 	
 	public void atualizar(Pais pais){
-		dao.update(pais);
+		dao.updatePais(pais);
 	}
 	
 	public void excluir(int id){
 		dao.delete(id);
 	}
 	
-	public Pais carregar(Pais pais){
-		return dao.select(pais);
+	public Pais carregar(int id){
+		return dao.selectPais(id);
 	}
+	
+	public ArrayList<Pais> listarPaises(){
+		return dao.listarPaises();
+	}
+	
+	public ArrayList<Pais> listarPaises(String chave){
+		return dao.listarPaises(chave);
+	}
+
 }

@@ -23,7 +23,7 @@
 	<div class="modal-body"> Deseja realmente excluir este pais?
 	</div>
 	<div class="modal-footer"> <form action	="ManterPais.do"method="post"> 
-	<input type	="hidden"name="id" id="id_excluir" /> <button type="submit"class="btn btn-primary" name="acao" value="Excluir">Sim
+	<input type	="hidden"name="id" id="id_excluir" /> <button type="submit"class="btn btn-primary" name="command" value="ListarPaises">Sim
 	</button>
 	<button type ="button"class="btn btn-default" data-dismiss="modal">N&atilde;o
 	</button>
@@ -40,7 +40,7 @@
 	</div>
 	<div class="col-md-6"> <div class ="input-grouph2">
 	<input name ="data[search]"class="form-control" id="search"	type="text"	placeholder="Pesquisar pais (deixe vazio para trazer todos)">
-	<span class="input-group-btn"> <button class ="btn btn-primary"type="submit" name="acao" value="buscar"> 
+	<span class="input-group-btn"> <button class ="btn btn-primary"type="submit" name="command" value="ListarPaises"> 
 	<span class="glyphiconglyphicon-search">
 	</span>
 	</button>
